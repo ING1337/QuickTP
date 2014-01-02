@@ -2,9 +2,9 @@
 
 -- ##############################################################################################################
 
-spawnFile      = "spawns.txt"
-spawnHeight    = 200
-spawnRandomize = Vector3(100, 100, 100)
+spawnFile      = "spawns.txt"           -- Path to the file that contains the teleport targets
+spawnHeight    = 200                    -- The height above the destination
+spawnRandomize = Vector3(100, 100, 100) -- The size of the box around the destination to randomize
 
 -- ##############################################################################################################
 
