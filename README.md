@@ -11,4 +11,4 @@ Setup:
 Ingame:
 
 1. Hold down the "G" key (default, can easily changed) and move the mouse in the direction of the tp location
-2. Left click to confirm the teleport, right click to be teleported in your vehicle, release "G" to abort
+2. Left click to confirm the teleport, [b]right click to be teleported in your vehicle[/b], release "G" to abort
