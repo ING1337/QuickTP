@@ -2,10 +2,10 @@
 
 -- ##############################################################################################################
 
-key        = "G"
-fontSize   = 40
-fontColor  = Color(255, 255, 255)
-fontUpper  = true
+key        = "G"                  -- The assigned key to the menu
+fontSize   = 40                   -- Base fontsize, it will be modified depending on the entrycount and screensize
+fontColor  = Color(255, 255, 255) -- Textcolor
+fontUpper  = true                 -- Upper the text
 
 -- ##############################################################################################################
 
@@ -13,7 +13,7 @@ subRender  = nil
 subMouse   = nil
 subKey     = nil
 
-spawns     = nil -- {"airport", "mhc", "city1", "city2", "dirttrack", "desertap", "desertap2", "skull"}
+spawns     = nil
 spawnCount = nil
 selection  = nil
 
