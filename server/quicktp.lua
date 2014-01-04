@@ -30,10 +30,7 @@ Network:Subscribe("QuickTP", QuickTP)
 
 SendTPList = function(args, player)
 	if spawnList == "" then return end
-
-	local sendArgs = {}
-	sendArgs.list  = spawnList
-	Network:Send(player, "TPList", sendArgs) 
+	Network:Send(player, "TPList", {list = spawnList}) 
 end
 Network:Subscribe("RequestTPList", SendTPList)
 
