@@ -96,7 +96,7 @@ RenderMenu = function(args)
 	selection      = math.floor(((mouseA + angle) / (math.pi * 2)) * spawnCount)
 
 	if selection < 0 then selection = selection + spawnCount end
-	if size < 10 then size = 10 end
+	if size < 12 then size = 12 end
 
 	Render:FillArea(Vector2(0, 0), Render.Size, Color(0,0,0,100))
 
