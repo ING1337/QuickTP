@@ -82,6 +82,8 @@ end
 
 RenderMenu = function(args)
 	local size     = fontSize - spawnCount * 1.8 + Render.Width / 100
+	if size < 10 then size = 10 end
+	
 	local radius   = Render.Height / 2 - fontSize
 	local angle    = math.pi / spawnCount
 	local center   = Vector2(Render.Width / 2, Render.Height / 2)
