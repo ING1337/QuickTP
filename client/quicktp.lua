@@ -34,7 +34,7 @@ Network:Send("RequestTPList")
 -- ##############################################################################################################
 
 OnKeyDown = function(args)
-	if args.key == string.byte(key) then
+	if args.key == string.byte(key) and Game:GetState() == GUIState.Game then
 		Events:Unsubscribe(subKey)
 		subKey = Events:Subscribe("KeyUp", OnKeyUp)
 		OpenMenu()
