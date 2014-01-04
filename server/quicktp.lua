@@ -42,7 +42,7 @@ Network:Subscribe("RequestTPList", SendTPList)
 
 -- Functions to parse the spawns
 LoadSpawns = function( filename )
-    local file = io.open( filename, "r" )
+    local file = io.open( spawnFile, "r" )
 
     if file == nil then
         print( "No " .. spawnFile .. ", aborting loading of spawns" )
