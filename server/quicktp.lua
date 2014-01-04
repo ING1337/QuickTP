@@ -45,7 +45,7 @@ LoadSpawns = function( filename )
     local file = io.open( filename, "r" )
 
     if file == nil then
-        print( "[QuickTP] No spawns.txt, aborting loading of spawns" )
+        print( "No " .. spawnFile .. ", aborting loading of spawns" )
         return
     end
 
