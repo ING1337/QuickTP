@@ -9,13 +9,13 @@ fontUpper  = true                 -- Upper the text
 
 -- ##############################################################################################################
 
-subRender  = nil
-subMouse   = nil
-subKey     = nil
-
 spawns     = nil
 spawnCount = nil
 selection  = nil
+
+subRender  = nil
+subMouse   = nil
+subKey     = nil
 
 menuOpen   = false
 
@@ -102,8 +102,8 @@ RenderMenu = function(args)
 
 	Render:FillTriangle(
 		center,
-		Vector2(math.cos(selection * (angle*2) - angle) * drawRad + center.x, math.sin(selection * (angle*2) - angle) * drawRad + center.y),
-		Vector2(math.cos(selection * (angle*2) + angle) * drawRad + center.x, math.sin(selection * (angle*2) + angle) * drawRad + center.y),
+		Vector2(math.cos(selection * (angle*2) - angle) * drawRad, math.sin(selection * (angle*2) - angle) * drawRad) + center,
+		Vector2(math.cos(selection * (angle*2) + angle) * drawRad, math.sin(selection * (angle*2) + angle) * drawRad) + center,
 		Color(255, 0, 0, 100)
 	)
 
@@ -116,7 +116,7 @@ RenderMenu = function(args)
 		current  = current + angle
 		
 		Render:DrawText(coord, t, fontColor, size) 
-		Render:DrawLine(center, Vector2(math.cos(current) * drawRad + center.x, math.sin(current) * drawRad + center.y), Color(255,255,255,100))
+		Render:DrawLine(center, Vector2(math.cos(current) * drawRad, math.sin(current) * drawRad) + center, Color(255,255,255,100))
 		current = current + angle
 	end
 end
