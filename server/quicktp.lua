@@ -7,7 +7,7 @@ seperator         = ","                    -- Seperator sign(s), this string can
 spawnHeight       = 200                    -- The height above the destination
 spawnRandomize    = Vector3(100, 100, 100) -- The size of the box around the destination to randomize
 
-restrictedMain    = true                   -- Allows QuickTP only in the main world, else the following text shows up in the players chat
+restrictedToMain  = true                   -- Allows QuickTP only in the main world, else the following text shows up in the players chat
 restrictedMessage = "This is restricted to the Main World!"
 
 -- ##############################################################################################################
@@ -17,7 +17,7 @@ quickList  = {}
 
 QuickTP = function(args, player)
 	-- Chat:Broadcast("QuickTP: " .. player:GetName() .. " to " .. args.target, Color(255, 255, 255))
-	if restrictedMain and player:GetWorld() ~= DefaultWorld then
+	if restrictedToMain and player:GetWorld() ~= DefaultWorld then
             player:SendChatMessage(restrictedMessage, Color(255, 0, 0))
             return
         end
