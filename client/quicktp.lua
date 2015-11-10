@@ -125,7 +125,7 @@ RenderMenu = function(args)
 
 	for i=2, #menu, 1 do
 		local t = menu[i]
-		if type(t) == "table" then t = t[1] .. (showGroupCount and " [" .. tostring(#t - 1) .. "]" or "") end
+		if type(t) == "table" then t = t[1]:trim() .. (showGroupCount and " [" .. tostring(#t - 1) .. "]" or "") end
 		if fontUpper then t = string.upper(t) end
 
 		textSize = Render:GetTextSize(t, size) 
